@@ -1,0 +1,91 @@
+@import "twitter/bootstrap/bootstrap";
+body {padding-top: 60px;}
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 1309px;
+}
+
+.span9 {
+  width: 980px;
+}
+
+.table tr td {
+  text-align: center;
+}
+
+.table thead tr td {
+  font-weight: bold;
+}
+
+.table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th {
+  background-color: #396B9A;
+  color:white;
+}
+
+.navbar-inner {
+  background-color: #396B9A;
+  background-image: linear-gradient(to bottom, #396B9A, #396B9A);
+  background-repeat: repeat-x;
+  border: 1px solid #D4D4D4;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+  min-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.navbar .brand {
+  color: white;
+  display: block;
+  float: left;
+  font-size: 20px;
+  font-weight: 200;
+  margin-left: -20px;
+  padding: 10px 20px;
+  text-shadow: none;
+}
+
+.navbar .nav > li > a {
+  color: white;
+  float: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.navbar .nav > li > a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
