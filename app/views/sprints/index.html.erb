@@ -15,10 +15,16 @@
     <tr>
     <td><%= sprint.title %></td>
     <td><%= sprint.summary %></td>
-    <td style="text-align: center;"><%= check_box_tag 'in progress', 'yes', sprint.in_progress, :disabled => true %></td>
+    <td class="checker" style="text-align: center;"><%= check_box_tag 'in progress', 'yes', sprint.in_progress, :disabled => true %></td>
     <td><%= DateFriendlyFormatter.friendlydate(sprint.start_date) %></td>
     <td><%= DateFriendlyFormatter.friendlydate(sprint.exp_end_date) %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+
+<div class="actions">
+  <div>
+    <%= link_to 'New Sprint', new_sprint_path %>
+  </div>
+</div>

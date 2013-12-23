@@ -1,0 +1,33 @@
+<%= form_for(@template) do |f| %>
+  <% if @template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h2>
+
+      <ul>
+      <% @template.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_field :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :inprog %><br />
+    <%= f.check_box :inprog %>
+  </div>
+  <div class="field">
+    <%= f.label :started %><br />
+    <%= f.date_select :started %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

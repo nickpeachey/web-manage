@@ -26,6 +26,7 @@ gem 'jasmine-rails'
 group :test, :development do
   gem 'rspec-rails'
   gem 'teaspoon'
+  gem 'simplecov', :require => false
 end
 
 group :test do

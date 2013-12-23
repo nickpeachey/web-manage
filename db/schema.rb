@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131220114439) do
+ActiveRecord::Schema.define(:version => 20131222124814) do
 
   create_table "sprints", :force => true do |t|
     t.string   "title"
@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(:version => 20131220114439) do
 
   create_table "templates", :force => true do |t|
     t.string   "title"
-    t.string   "name"
-    t.string   "something"
+    t.string   "summary"
+    t.boolean  "inprog"
+    t.date     "started"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

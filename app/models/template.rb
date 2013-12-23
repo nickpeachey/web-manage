@@ -1,3 +1,3 @@
 class Template < ActiveRecord::Base
-  attr_accessible :name, :something, :title
+  attr_accessible :inprog, :started, :summary, :title
 end

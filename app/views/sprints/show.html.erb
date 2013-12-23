@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%= @sprint.title %>
+</p>
+
+<p>
+  <b>Summary:</b>
+  <%= @sprint.summary %>
+</p>
+
+<p>
+  <b>Inprog:</b>
+  <%= @sprint.in_progress %>
+</p>
+
+<p>
+  <b>Started:</b>
+  <%=@sprint.start_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_sprint_path(@sprint) %> |
+<%= link_to 'Back', sprints_path %>

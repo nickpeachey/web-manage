@@ -64,21 +64,24 @@
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
+
+          <% if (ongoing_sprints) %>
           <div class="span3">
             <div class="well sidebar-nav">
               <h3>In Progress</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">Current Sprints</li>
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>
+                <% ongoing_sprints.each do |sprint| %>
+                    <li><%= link_to sprint.title, sprint_path(sprint)  %></li>
+                <% end %>
               </ul>
             </div><!--/.well -->
           </div><!--/span-->
+          <% end %>
         </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; Cawooka 2013</p>
       </footer>
 
     </div> <!-- /container -->
